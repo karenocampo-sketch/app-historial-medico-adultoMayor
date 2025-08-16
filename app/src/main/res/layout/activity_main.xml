@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cuidado Adulto Mayor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:background="#E3F2FD"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Información del paciente -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-ˏˋ⋆ INFORMACIÓN DEL PACIENTE ⋆ˊˎ-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Datos del paciente -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👤 Nombre: Juan Pérez"
+                android:textSize="18sp"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎂 Edad: 78 años"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏠 Dirección: Calle Falsa 123, Ciudad"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🩸 Tipo de Sangre: O+"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📏 Estatura: 1.68 m"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Peso: 72 kg"
+                android:textSize="16sp"
+                android:textColor="#0D47A1" />
+
+        </LinearLayout>
+
+        <!-- Botones principales -->
+        <Button
+            android:id="@+id/btnHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🩺 Ver Historial Médico"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1976D2"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnMedicamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Ver Medicamentos"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1976D2"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Área de información dinámica -->
+        <TextView
+            android:id="@+id/infoLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#E3F2FD"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón de emergencia -->
+        <Button
+            android:id="@+id/btnEmergencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚨 ¡¡EMERGENCIA!! 🚨"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D32F2F"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Instrucciones de emergencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F1F8E9"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 Instrucciones de Emergencia:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👆 2 toques rápidos: Contacto de emergencia"
+                android:textSize="14sp"
+                android:textColor="#388E3C"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👆 3 toques rápidos: Llamar al 911"
+                android:textSize="14sp"
+                android:textColor="#388E3C" />
+
+        </LinearLayout>
+
+        <!-- Créditos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Desarrollado por:\nCaren Romero • Karen Ocampo • Diego Castro"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

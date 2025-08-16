@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Historial Médico Adulto Mayor</string>
+    <string name="patient_name">Juan Pérez</string>
+    <string name="patient_age">78 años</string>
+    <string name="emergency_contact">Contacto de Emergencia</string>
+    <string name="call_911">Llamar al 911</string>
+</resources>
