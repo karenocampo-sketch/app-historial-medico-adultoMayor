@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:spacing="30dp">
+
+        <TextView
+            android:text="-ˏˋ⋆ INFORMACIÓN DEL PACIENTE ⋆ˊˎ-"
+            android:textSize="30sp"
+            android:textColor="#0D47A1"
+            android:gravity="center"/>
+
+        <TextView android:text="Nombre: Juan Perez" android:textSize="22sp" android:textColor="#0D47A1"/>
+        <TextView android:text="Edad: 78 años" android:textSize="18sp" android:textColor="#0D47A1"/>
+        <TextView android:text="Dirección: Calle Falsa 123, Ciudad" android:textSize="18sp" android:textColor="#0D47A1"/>
+        <TextView android:text="Tipo de Sangre: O+" android:textSize="18sp" android:textColor="#0D47A1"/>
+        <TextView android:text="Estatura: 1.68 m" android:textSize="18sp" android:textColor="#0D47A1"/>
+        <TextView android:text="Peso: 72 kg" android:textSize="18sp" android:textColor="#0D47A1"/>
+
+        <Button
+            android:id="@+id/btnHistorial"
+            android:text="Ver Historial Médico"
+            android:textSize="18sp"
+            android:background="#1976D2"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnMedicamentos"
+            android:text="Ver Medicamentos"
+            android:textSize="18sp"
+            android:background="#1976D2"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/infoLabel"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#E3F2FD"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/btnEmergencia"
+            android:text=" ☎︎ ¡¡EMERGENCIA!! ⛟ "
+            android:textSize="20sp"
+            android:background="#D32F2F"
+            android:textColor="#FFFFFF"/>
+
+        <TextView android:text="☞ Presione 2 veces para el contacto de emergencia" android:textSize="20sp" android:textColor="#008000"/>
+        <TextView android:text="☞ 3 veces para llamar a emergencias 911 ⛨" android:textSize="20sp" android:textColor="#008000"/>
+        <TextView android:text="Caren Romero - Karen Ocampo - Diego Castro" android:textSize="15sp" android:textColor="#000000"/>
+
+    </LinearLayout>
+</ScrollView>
