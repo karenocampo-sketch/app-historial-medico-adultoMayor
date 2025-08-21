@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🩺 Cuidado Adulto Mayor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:background="#E3F2FD"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Sección del paciente con foto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F5F5F5"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Foto del paciente -->
+            <ImageView
+                android:id="@+id/imgFotoPaciente"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:padding="16dp"
+                android:src="@drawable/ic_person_placeholder" />
+
+            <!-- Información básica del paciente -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNombrePaciente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Juan Pérez García"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnEditarPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✏️ Editar Perfil"
+                    android:textSize="14sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Botones principales reorganizados -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 INFORMACIÓN MÉDICA"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón de Historial Médico -->
+        <Button
+            android:id="@+id/btnHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🩺 Ver Historial Médico"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1976D2"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Área de información del historial médico -->
+        <TextView
+            android:id="@+id/tvHistorialInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#E8F5E8"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón de Medicamentos -->
+        <Button
+            android:id="@+id/btnMedicamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Ver Medicamentos"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1976D2"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Área de información de medicamentos -->
+        <TextView
+            android:id="@+id/tvMedicamentosInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#FFF3E0"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Sección de Emergencia -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚨 EMERGENCIAS"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón de Contacto de Emergencia -->
+        <Button
+            android:id="@+id/btnContactoEmergencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📞 Ver Contactos de Emergencia"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF7043"
+            android:padding="20dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Área de contactos de emergencia con botones individuales -->
+        <LinearLayout
+            android:id="@+id/layoutContactosEmergencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFE8E0"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 CONTACTOS DE EMERGENCIA:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#D84315"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Contacto 1 -->
+            <LinearLayout
+                android:id="@+id/layoutContacto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvContacto1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contacto 1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvTelefono1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono 1"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnLlamarContacto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📞 LLAMAR"
+                    android:textSize="12sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <!-- Contacto 2 -->
+            <LinearLayout
+                android:id="@+id/layoutContacto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvContacto2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contacto 2"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvTelefono2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono 2"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnLlamarContacto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📞 LLAMAR"
+                    android:textSize="12sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <!-- Contacto 3 -->
+            <LinearLayout
+                android:id="@+id/layoutContacto3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvContacto3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contacto 3"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/tvTelefono3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono 3"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnLlamarContacto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📞 LLAMAR"
+                    android:textSize="12sp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Botón de Llamar al 123 -->
+        <Button
+            android:id="@+id/btnLlamar123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚨 LLAMAR AL 123 🚨"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D32F2F"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Instrucciones de emergencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F1F8E9"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 Instrucciones de Emergencia:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 Contactos: Desplegable con 3 números"
+                android:textSize="14sp"
+                android:textColor="#388E3C"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚨 Emergencia 123: Llamada directa a emergencias"
+                android:textSize="14sp"
+                android:textColor="#388E3C" />
+
+        </LinearLayout>
+
+        <!-- Botón de Borrar Todos los Datos del Paciente -->
+        <Button
+            android:id="@+id/btnBorrarHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗑️ Borrar Datos del Paciente"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón de Salir -->
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚪 Salir de la App"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#757575"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Créditos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Desarrollado por:\nCaren Romero • Karen Ocampo • Diego Castro"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>
